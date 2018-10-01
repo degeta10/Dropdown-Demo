@@ -16,10 +16,17 @@
       <tr>
         <td>{{    $dropdown->id      }}</td>
         <td>{{    $dropdown->depots   }}</td>
-        <td>{{    $dropdown->assigned   }}</td>
-        @foreach ( $dropdown->assigned as $element)
-
-        @endforeach
+        <td>
+          {{-- <select name="depots[]" style="padding:6px 12px;display:block;width:50%;" required >
+            <option value="" disabled selected>Select Depot</option>
+              @php
+                $depots = explode(",",$dropdown->depots);
+              @endphp
+              @foreach ($depots as $depot)
+                  <option value="{{$depot}}">{{$depot}}</option>
+              @endforeach
+          </select> --}}
+        </td>
       </tr>
     @endforeach
     </tbody>
